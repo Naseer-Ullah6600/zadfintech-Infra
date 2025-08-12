@@ -1,0 +1,8 @@
+{
+  "tags": {
+    "Environment": {
+      "enforced": true,
+      "values": ["Production", "Development", "Security"]
+    }
+  }
+}
