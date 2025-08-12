@@ -13,7 +13,7 @@ output "permission_set_arns" {
   value = {
     administrator_access = length(aws_ssoadmin_permission_set.administrator_access) > 0 ? aws_ssoadmin_permission_set.administrator_access[0].arn : ""
     read_only_access     = length(aws_ssoadmin_permission_set.read_only_access) > 0 ? aws_ssoadmin_permission_set.read_only_access[0].arn : ""
-    power_user_access    = length(aws_ssoadmin_permission_set.power_user_access) > 0 ? aws_ssoadmin_permission_set.power_user_access[0].arn : ""
+    developers           = length(aws_ssoadmin_permission_set.developers) > 0 ? aws_ssoadmin_permission_set.developers[0].arn : ""
   }
 }
 
@@ -22,7 +22,7 @@ output "group_ids" {
   value = {
     administrators  = length(aws_identitystore_group.administrators) > 0 ? aws_identitystore_group.administrators[0].group_id : ""
     read_only_users = length(aws_identitystore_group.read_only_users) > 0 ? aws_identitystore_group.read_only_users[0].group_id : ""
-    power_users     = length(aws_identitystore_group.power_users) > 0 ? aws_identitystore_group.power_users[0].group_id : ""
+    developers      = length(aws_identitystore_group.dev_user) > 0 ? aws_identitystore_group.dev_user[0].group_id : ""
   }
 }
 
